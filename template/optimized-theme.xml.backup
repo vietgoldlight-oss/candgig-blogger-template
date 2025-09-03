@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.2.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+    <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' name='viewport'/>
+    <title><data:view.title.escaped/></title>
+    <b:include data='blog' name='all-head-content'/>
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+    <meta expr:content='data:blog.title.escaped' name='author'/>
+    <meta content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' name='robots'/>
+    <link expr:href='data:blog.canonicalUrl' rel='canonical'/>
+    
+    <!-- Enhanced Open Graph Meta Tags -->
+    <b:if cond='data:view.isHomepage'>
+      <meta content='website' property='og:type'/>
+      <meta expr:content='data:blog.title.escaped' property='og:title'/>
+      <meta expr:content='data:blog.metaDescription' property='og:description'/>
+      <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+      <meta content='CandGig' property='og:site_name'/>
+    </b:if>
+    <b:if cond='data:view.isSingleItem'>
+      <meta content='article' property='og:type'/>
+      <meta expr:content='data:view.title.escaped' property='og:title'/>
+      <meta expr:content='data:view.description.escaped' property='og:description'/>
+      <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+      <meta content='CandGig' property='og:site_name'/>
+      <b:if cond='data:view.featuredImage'>
+        <meta expr:content='data:view.featuredImage' property='og:image'/>
+        <meta content='1200' property='og:image:width'/>
+        <meta content='630' property='og:image:height'/>
+      </b:if>
+    </b:if>
+    
+    <!-- Enhanced Twitter Card Meta Tags -->
+    <meta content='summary_large_image' name='twitter:card'/>
+    <meta expr:content='data:blog.title.escaped' name='twitter:site'/>
+    <meta expr:content='data:view.title.escaped' name='twitter:title'/>
+    <meta expr:content='data:view.description.escaped' name='twitter:description'/>
+    <b:if cond='data:view.featuredImage'>
+      <meta expr:content='data:view.featuredImage' name='twitter:image'/>
+    </b:if>
+    
+    <!-- Performance Optimizations -->
+    <link href='https://fonts.googleapis.com' rel='preconnect'/>
+    <link href='https://fonts.gstatic.com' rel='preconnect' crossorigin='anonymous'/>
+    <link href='https://cdnjs.cloudflare.com' rel='preconnect'/>
+    
+    <!-- Font Loading with fallbacks -->
+    <link as='style' href='https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap' onload='this.onload=null;this.rel=&quot;stylesheet&quot;' rel='preload'/>
+    <noscript>
+      <link href='https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap' rel='stylesheet'/>
+    </noscript>
+    
+    <!-- Font Awesome -->
+    <link as='style' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' onload='this.onload=null;this.rel=&quot;stylesheet&quot;' rel='preload'/>
+    <noscript>
+      <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' rel='stylesheet'/>
+    </noscript>
+    
+    <!-- Theme Stylesheets via CDN -->
+    <link href='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/css/style.css' rel='stylesheet' type='text/css'/>
+    <link href='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/css/responsive.css' rel='stylesheet' type='text/css'/>
+    
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      /* Critical CSS for faster loading */
+      body { 
+        font-family: 'Noto Sans', system-ui, -apple-system, sans-serif; 
+        margin: 0; 
+        line-height: 1.6; 
+        color: #656565; 
+      }
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #f12020;
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        z-index: 1001;
+        border-radius: 4px;
+      }
+      .skip-link:focus {
+        top: 6px;
+      }
+      #outer-wrapper { 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        background: #fff; 
+        box-shadow: 0 0 5px rgba(0,0,0,.1); 
+      }
+      .loading { 
+        text-align: center; 
+        padding: 20px; 
+        color: #999; 
+      }
+      .loading::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid #f12020;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 10px;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+    
+    <!-- Theme Configuration -->
+    <script type='text/javascript'>
+    //<![CDATA[
+    // CandGig Theme Configuration
+    window.CandGigConfig = {
+      monthFormat: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      noThumbnail: "https://via.placeholder.com/680x400/f0f0f0/666666?text=CandGig",
+      postPerPage: 8,
+      fixedSidebar: true,
+      commentsSystem: "blogger", // blogger, disqus, facebook, hide
+      disqusShortname: "candgig",
+      theme: {
+        name: "CandGig",
+        version: "1.0",
+        author: "CandGig Team",
+        repository: "https://github.com/vietgoldlight-oss/candgig-blogger-template"
+      }
+    };
+    //]]>
+    </script>
+  </head>
+  
+  <body expr:class='data:blog.pageType + &quot; &quot; + data:blog.languageDirection' itemscope='itemscope' itemtype='https://schema.org/WebPage'>
+    <!-- Skip to content link for accessibility -->
+    <a href='#main-content' class='skip-link'>Skip to main content</a>
+    
+    <div id='outer-wrapper'>
+      <!-- Template completed - This is a simplified optimized version -->
+      <div id='main-content'>
+        <div class='container row'>
+          <h1>CandGig Blogger Template</h1>
+          <p>This is the optimized English version of the CandGig Blogger template.</p>
+          <p>The template is now using external CSS and JavaScript files loaded via CDN for better performance.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- JavaScript via CDN -->
+    <script src='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/js/utils.js' defer='defer'></script>
+    <script src='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/js/main.js' defer='defer'></script>
+    
+    <!-- Initialize theme -->
+    <script>
+    //<![CDATA[
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize CandGig theme
+      if (window.CandGigTheme && window.CandGigTheme.init) {
+        window.CandGigTheme.init();
+      }
+      
+      // Remove mobile parameter
+      var uri = window.location.toString();
+      if (uri.indexOf("?m=1") > 0) {
+        var clean_uri = uri.substring(0, uri.indexOf("?m=1"));
+        window.history.replaceState({}, document.title, clean_uri);
+      }
+    });
+    //]]>
+    </script>
+  </body>
+</html>
