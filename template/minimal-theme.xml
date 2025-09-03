@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.2.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <title><data:view.title.escaped/></title>
+    <b:include data='blog' name='all-head-content'/>
+    
+    <!-- Basic SEO -->
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+    <link expr:href='data:blog.canonicalUrl' rel='canonical'/>
+    
+    <!-- CandGig External Styles -->
+    <link href='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/css/style.css' rel='stylesheet'/>
+    <link href='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/css/responsive.css' rel='stylesheet'/>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' rel='stylesheet'/>
+    
+    <!-- Required b:skin for Blogger validation -->
+    <b:skin version='1.0.0'><![CDATA[
+/* CandGig Minimal Template - Essential Styles Only */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f8f8;
+}
+
+#outer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Hide Blogger elements */
+#navbar-iframe, .widget-item-control, a.quickedit, .home-link, .feed-links {
+  display: none !important;
+}
+
+/* Basic post styles */
+.post {
+  margin: 20px 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.post-title a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.post-title a:hover {
+  color: #f12020;
+}
+
+/* Basic responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .post {
+    margin: 10px 0;
+    padding: 15px;
+  }
+}
+]]></b:skin>
+  </head>
+  
+  <body expr:class='data:blog.pageType' itemscope='itemscope' itemtype='https://schema.org/WebPage'>
+    <div id='outer-wrapper'>
+      <!-- Header -->
+      <header id='header-wrapper'>
+        <div class='container'>
+          <b:section class='header' id='header' maxwidgets='1' name='Header' showaddelement='yes'>
+            <b:widget id='Header1' locked='false' title='Blog Title (Header)' type='Header' version='2' visible='true'>
+              <b:widget-settings>
+                <b:widget-setting name='displayUrl'/>
+                <b:widget-setting name='displayHeight'>60</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+                <div class='header-content'>
+                  <b:if cond='data:blog.logoUrl'>
+                    <a expr:href='data:blog.homepageUrl'>
+                      <img expr:alt='data:blog.title' expr:src='data:blog.logoUrl'/>
+                    </a>
+                  <b:else/>
+                    <h1><a expr:href='data:blog.homepageUrl'><data:blog.title/></a></h1>
+                  </b:if>
+                  <b:if cond='data:blog.description'>
+                    <p class='description'><data:blog.description/></p>
+                  </b:if>
+                </div>
+              </b:includable>
+            </b:widget>
+          </b:section>
+        </div>
+      </header>
+      
+      <!-- Content -->
+      <main id='content-wrapper'>
+        <div class='container'>
+          <b:section class='main' id='main' maxwidgets='1' name='Blog Posts' showaddelement='no'>
+            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+              <b:widget-settings>
+                <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+                <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+                <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main' var='top'>
+                <div class='blog-posts'>
+                  <b:if cond='data:posts'>
+                    <b:loop values='data:posts' var='post'>
+                      <article class='post'>
+                        <h2 class='post-title'>
+                          <a expr:href='data:post.link'><data:post.title/></a>
+                        </h2>
+                        <div class='post-meta'>
+                          <span>By <data:post.author/></span>
+                          <span> • </span>
+                          <time expr:datetime='data:post.date.iso8601'><data:post.date/></time>
+                        </div>
+                        <div class='post-body'>
+                          <data:post.body/>
+                        </div>
+                        <b:if cond='data:post.labels'>
+                          <div class='post-labels'>
+                            <b:loop values='data:post.labels' var='label'>
+                              <a expr:href='data:label.url'><data:label.name/></a>
+                            </b:loop>
+                          </div>
+                        </b:if>
+                      </article>
+                    </b:loop>
+                  </b:if>
+                </div>
+                
+                <!-- Pagination -->
+                <div class='blog-pager'>
+                  <b:if cond='data:olderPageUrl'>
+                    <a expr:href='data:olderPageUrl'>« Older Posts</a>
+                  </b:if>
+                  <b:if cond='data:newerPageUrl'>
+                    <a expr:href='data:newerPageUrl'>Newer Posts »</a>
+                  </b:if>
+                </div>
+              </b:includable>
+            </b:widget>
+          </b:section>
+          
+          <!-- Simple Sidebar -->
+          <aside id='sidebar'>
+            <b:section class='sidebar' id='sidebar1' name='Sidebar' showaddelement='yes'/>
+          </aside>
+        </div>
+      </main>
+      
+      <!-- Footer -->
+      <footer id='footer-wrapper'>
+        <div class='container'>
+          <p>© <span id='year'></span> <data:blog.title/>. Powered by Blogger.</p>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- External Scripts -->
+    <script src='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/js/main.js' defer='defer'></script>
+    
+    <script>
+    //<![CDATA[
+    // Set current year
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
+    //]]>
+    </script>
+  </body>
+</html>

@@ -39,6 +39,60 @@ Download the optimized template file:
 - ✅ Dark mode support
 - ✅ Performance optimized
 
+## Troubleshooting
+
+### Template Validation Issues
+
+**Error: "There should be one and only one skin in the theme, and we found: 0"**
+
+This error occurs when the template lacks the required `<b:skin>` tags. Use our corrected templates:
+
+- **Recommended**: `optimized-theme-v2.xml` - Full-featured template with proper Blogger structure
+- **Backup**: `minimal-theme.xml` - Ultra-minimal version for compatibility
+
+### Template Versions
+
+| Template | Features | File Size | Use Case |
+|----------|----------|-----------|----------|
+| `optimized-theme-v2.xml` | Full features, all widgets, CDN assets | ~22KB | Production sites |
+| `minimal-theme.xml` | Basic structure, essential widgets only | ~7KB | Simple blogs, testing |
+| `original-theme.xml` | Complete CSS inline, all features | ~120KB | Reference only |
+
+### Installation Steps for Corrected Template
+
+1. **Download the corrected template**:
+   ```bash
+   wget https://raw.githubusercontent.com/vietgoldlight-oss/candgig-blogger-template/main/template/optimized-theme-v2.xml
+   ```
+
+2. **Upload to Blogger**:
+   - Go to Blogger Dashboard → Theme → Edit HTML
+   - **Backup your current theme first**
+   - Upload `optimized-theme-v2.xml`
+   - Click "Save theme"
+
+3. **Verify installation**:
+   - Check that the theme loads without errors
+   - Verify CDN assets are loading correctly
+   - Test responsiveness on mobile devices
+
+### Common Issues and Solutions
+
+**CDN Assets Not Loading**
+- Check internet connection
+- Verify CDN URLs are accessible
+- Try the minimal template if CDN is blocked
+
+**Missing Widgets**
+- Use "Add a Gadget" in Layout mode
+- Widgets are pre-configured in the template
+- All standard Blogger widgets are supported
+
+**Layout Issues**
+- Clear browser cache
+- Check for any custom CSS conflicts
+- Verify theme is fully uploaded
+
 ## Support
 
 Need help? Check our [GitHub Issues](https://github.com/vietgoldlight-oss/candgig-blogger-template/issues) or create a new issue.

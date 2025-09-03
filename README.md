@@ -69,9 +69,13 @@ candgig-blogger-template/
 
 ### Method 1: Direct Upload (Recommended)
 
-1. **Download the template**:
+1. **Download the corrected template**:
    ```bash
-   wget https://raw.githubusercontent.com/vietgoldlight-oss/candgig-blogger-template/main/template/optimized-theme.xml
+   # Recommended: Full-featured template
+   wget https://raw.githubusercontent.com/vietgoldlight-oss/candgig-blogger-template/main/template/optimized-theme-v2.xml
+   
+   # Alternative: Minimal template
+   wget https://raw.githubusercontent.com/vietgoldlight-oss/candgig-blogger-template/main/template/minimal-theme.xml
    ```
 
 2. **Go to your Blogger dashboard**:
@@ -80,8 +84,8 @@ candgig-blogger-template/
 3. **Backup your current theme**:
    - Click `Download theme` to save your current template
 
-4. **Upload the new template**:
-   - Click `Choose File` and select `optimized-theme.xml`
+4. **Upload the corrected template**:
+   - Click `Choose File` and select `optimized-theme-v2.xml` (recommended) or `minimal-theme.xml`
    - Click `Upload`
 
 5. **Save the changes**:
@@ -257,12 +261,21 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 🔄 Version History
 
-### v1.0.0 (Current)
+### v2.0.0 (Latest - Blogger Compatible)
+- **FIXED**: Added required `<b:skin>` tags for Blogger validation
+- **NEW**: `optimized-theme-v2.xml` - Complete template with proper structure
+- **NEW**: `minimal-theme.xml` - Ultra-minimal backup version
+- Enhanced SEO and accessibility features
+- External CSS/JS assets via CDN
+- Mobile-first responsive design
+- Complete widget compatibility
+
+### v1.0.0 (Legacy)
 - Initial optimized release
 - External CSS/JS assets
 - Enhanced SEO and accessibility
-- Mobile-first responsive design
 - Performance optimizations
+- **ISSUE**: Missing `<b:skin>` tags (use v2.0.0 instead)
 
 ---
 
