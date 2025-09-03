@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<!-- Candgig Blogger Template - Optimized Version 2.0.0 -->
+<!-- Optimized for Core Web Vitals, SEO, and Vietnamese Parenting Blog -->
+<!-- Target: candgig.blogspot.com - Cuddles & Giggles -->
+
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, viewport-fit=cover'/>
+
+<!-- Preconnect to external domains for performance -->
+<link rel='preconnect' href='https://fonts.googleapis.com'/>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin=''/>
+<link rel='preconnect' href='https://www.google-analytics.com'/>
+
+<!-- DNS prefetch for better performance -->
+<link rel='dns-prefetch' href='//blogger.googleusercontent.com'/>
+<link rel='dns-prefetch' href='//resources.blogblog.com'/>
+
+<!-- Title optimization -->
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+  <title>Cuddles &amp; Giggles - Trang chủ nuôi dạy con và chăm sóc em bé</title>
+<b:else/>
+  <title><data:blog.pageName/> | Cuddles &amp; Giggles</title>
+</b:if>
+
+<!-- Meta description optimization -->
+<b:if cond='data:blog.metaDescription'>
+  <meta name='description' expr:content='data:blog.metaDescription'/>
+<b:else/>
+  <meta name='description' content='Cuddles &amp; Giggles - Blog chuyên về nuôi dạy con, chăm sóc em bé và phát triển trẻ em. Chia sẻ kinh nghiệm làm cha mẹ và mẹo vặt chăm sóc con yêu.'/>
+</b:if>
+
+<!-- Keywords for Vietnamese parenting content -->
+<meta name='keywords' content='nuôi dạy con, chăm sóc em bé, phát triển trẻ em, kinh nghiệm làm mẹ, mẹo vặt nuôi con, sức khỏe trẻ em, giáo dục trẻ em, candgig, cuddles giggles'/>
+
+<!-- Open Graph meta tags -->
+<meta property='og:site_name' content='Cuddles &amp; Giggles'/>
+<meta property='og:type' content='website'/>
+<meta property='og:locale' content='vi_VN'/>
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+  <meta property='og:title' content='Cuddles &amp; Giggles - Trang chủ nuôi dạy con và chăm sóc em bé'/>
+  <meta property='og:url' expr:content='data:blog.homepageUrl'/>
+<b:else/>
+  <meta property='og:title' expr:content='data:blog.pageName'/>
+  <meta property='og:url' expr:content='data:blog.url'/>
+</b:if>
+<meta property='og:description' expr:content='data:blog.metaDescription'/>
+<meta property='og:image' content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8candgig-og-image.png'/>
+
+<!-- Twitter Card meta tags -->
+<meta name='twitter:card' content='summary_large_image'/>
+<meta name='twitter:site' content='@candgig'/>
+<meta name='twitter:creator' content='@candgig'/>
+
+<!-- Canonical URL -->
+<link expr:href='data:blog.url' rel='canonical'/>
+
+<!-- RSS Feed -->
+<link expr:href='data:blog.feedLinks[0].url' rel='alternate' title='RSS Feed' type='application/rss+xml'/>
+
+<!-- Favicon and App Icons -->
+<link rel='icon' type='image/x-icon' href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/favicon.ico'/>
+<link rel='apple-touch-icon' sizes='180x180' href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/apple-touch-icon.png'/>
+<link rel='icon' type='image/png' sizes='32x32' href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/favicon-32x32.png'/>
+
+<!-- Web App Manifest for PWA -->
+<link rel='manifest' href='/manifest.json'/>
+<meta name='theme-color' content='#FF6B6B'/>
+<meta name='msapplication-TileColor' content='#FF6B6B'/>
+
+<!-- Font optimization with Vietnamese character support -->
+<link rel='preload' href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap' as='style' onload='this.onload=null;this.rel=&quot;stylesheet&quot;'/>
+<noscript><link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap'/></noscript>
+
+<!-- Structured Data - Organization -->
+<script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Cuddles & Giggles",
+  "alternateName": "Candgig",
+  "url": "https://candgig.blogspot.com/",
+  "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/candgig-logo.png",
+  "description": "Blog chuyên về nuôi dạy con, chăm sóc em bé và phát triển trẻ em",
+  "sameAs": [
+    "https://facebook.com/candgig24",
+    "https://twitter.com/candgig"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "availableLanguage": ["Vietnamese", "English"]
+  }
+}
+</script>
+
+<!-- Critical CSS inlined for performance -->
+<style>
+/* Critical CSS - Above the fold styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #FF6B6B;
+  --secondary-color: #4ECDC4;
+  --accent-color: #45B7D1;
+  --text-color: #2C3E50;
+  --text-light: #6C757D;
+  --background-color: #FFFFFF;
+  --background-light: #F8F9FA;
+  --border-color: #DEE2E6;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+  --border-radius: 8px;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+  --container-max-width: 1200px;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+}
+
+html {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background: var(--background-color);
+  font-display: swap;
+}
+
+/* Skip to main content for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 999;
+  border-radius: var(--border-radius);
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Header styles */
+.header {
+  background: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+
+.header-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: var(--spacing-sm);
+  border-radius: 50%;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Navigation styles */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.main-nav {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background: var(--background-light);
+  color: var(--primary-color);
+}
+
+/* Container and layout */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-xxl);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Loading spinner for better perceived performance */
+.loading {
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--background-light);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--background-color);
+    flex-direction: column;
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow);
+  }
+  
+  .main-nav.active {
+    display: flex;
+  }
+  
+  .main-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .header-container {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .site-title {
+    font-size: 1.25rem;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+/* Print styles */
+@media print {
+  .header, .sidebar, .footer {
+    display: none;
+  }
+  
+  .main-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+
+<b:skin><![CDATA[
+/* Main stylesheet loaded asynchronously */
+/* This section contains non-critical CSS */
+
+/* Blog post styles */
+.post {
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--spacing-xl);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.post:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.post-header {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: var(--spacing-sm);
+}
+
+.post-title a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.post-title a:hover {
+  color: var(--primary-color);
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  color: var(--text-light);
+  font-size: 0.9rem;
+  align-items: center;
+}
+
+.post-author, .post-date, .post-labels {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.post-body {
+  padding: var(--spacing-lg);
+  line-height: 1.7;
+}
+
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin: var(--spacing-md) 0;
+}
+
+.post-footer {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--background-light);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Sidebar styles */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.widget {
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.widget-title {
+  background: var(--primary-color);
+  color: white;
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.widget-content {
+  padding: var(--spacing-lg);
+}
+
+/* Labels/tags styles */
+.label {
+  display: inline-block;
+  background: var(--background-light);
+  color: var(--text-color);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin: 0 var(--spacing-xs) var(--spacing-xs) 0;
+  transition: all 0.3s ease;
+}
+
+.label:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Footer styles */
+.footer {
+  background: var(--text-color);
+  color: white;
+  margin-top: var(--spacing-xxl);
+}
+
+.footer-content {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-xxl) var(--spacing-md) var(--spacing-lg);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.footer-section h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding: var(--spacing-lg) var(--spacing-md);
+  text-align: center;
+  color: #888;
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-top: var(--spacing-md);
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive design enhancements */
+@media (max-width: 768px) {
+  .post-title {
+    font-size: 1.5rem;
+  }
+  
+  .post-header, .post-body {
+    padding: var(--spacing-md);
+  }
+  
+  .post-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles for keyboard navigation */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --shadow: 0 2px 10px rgba(0,0,0,0.3);
+    --border-color: #000;
+  }
+}
+
+/* Performance optimizations */
+.post-body img {
+  loading: lazy;
+  decoding: async;
+}
+
+/* Vietnamese typography optimizations */
+.post-body p, .post-body li {
+  text-align: justify;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+/* Search functionality */
+.search-container {
+  position: relative;
+  margin-bottom: var(--spacing-lg);
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: var(--primary-color);
+}
+
+.search-button {
+  position: absolute;
+  right: var(--spacing-xs);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-xl) 0;
+}
+
+.page-link {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.page-link:hover, .page-link.current {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+]]></b:skin>
+
+<!-- Performance monitoring script -->
+<script>
+// Core Web Vitals monitoring
+(function() {
+  // Simple performance monitoring
+  window.addEventListener('load', function() {
+    // Measure and report LCP, FID, CLS
+    if ('PerformanceObserver' in window) {
+      // LCP observer
+      new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        console.log('LCP:', lastEntry.startTime);
+      }).observe({entryTypes: ['largest-contentful-paint']});
+      
+      // FID observer
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        }
+      }).observe({entryTypes: ['first-input']});
+      
+      // CLS observer
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (!entry.hadRecentInput) {
+            console.log('CLS:', entry.value);
+          }
+        }
+      }).observe({entryTypes: ['layout-shift']});
+    }
+  });
+})();
+</script>
+
+</head>
+<body>
+
+<!-- Skip to main content link for accessibility -->
+<a href='#main' class='skip-link'>Skip to main content</a>
+
+<!-- Header -->
+<header class='header' role='banner'>
+  <div class='header-container'>
+    <a href='/' class='logo' aria-label='Cuddles and Giggles homepage'>
+      <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/candgig-logo.png' alt='Candgig Logo' class='logo-img' width='40' height='40'/>
+      <div>
+        <h1 class='site-title'>Cuddles &amp; Giggles</h1>
+        <p class='tagline'>Nuôi dạy con yêu thương</p>
+      </div>
+    </a>
+    
+    <button class='nav-toggle' aria-label='Toggle navigation' aria-expanded='false'>
+      ☰
+    </button>
+    
+    <nav class='main-nav' role='navigation' aria-label='Main navigation'>
+      <a href='/' class='nav-link'>Trang chủ</a>
+      <a href='/search/label/nuoi-day-con' class='nav-link'>Nuôi dạy con</a>
+      <a href='/search/label/cham-soc-be' class='nav-link'>Chăm sóc bé</a>
+      <a href='/search/label/giao-duc' class='nav-link'>Giáo dục</a>
+      <a href='/search/label/suc-khoe' class='nav-link'>Sức khỏe</a>
+      <a href='/p/lien-he.html' class='nav-link'>Liên hệ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class='container'>
+  <main class='main-wrapper' id='main' role='main'>
+    
+    <!-- Posts Section -->
+    <section class='posts-section' aria-label='Blog posts'>
+      <b:section class='main' id='main' maxwidgets='1' showaddelement='no'>
+        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1' visible='true'>
+          <b:includable id='main'>
+            <b:loop values='data:posts' var='post'>
+              <article class='post' itemscope='itemscope' itemtype='https://schema.org/BlogPosting'>
+                
+                <!-- Post header -->
+                <header class='post-header'>
+                  <h2 class='post-title' itemprop='headline'>
+                    <b:if cond='data:post.link'>
+                      <a expr:href='data:post.link' itemprop='url'><data:post.title/></a>
+                    <b:else/>
+                      <b:if cond='data:post.url'>
+                        <a expr:href='data:post.url' itemprop='url'><data:post.title/></a>
+                      <b:else/>
+                        <data:post.title/>
+                      </b:if>
+                    </b:if>
+                  </h2>
+                  
+                  <div class='post-meta'>
+                    <div class='post-author' itemprop='author' itemscope='itemscope' itemtype='https://schema.org/Person'>
+                      <span aria-label='Author'>👤</span>
+                      <span itemprop='name'><data:post.author/></span>
+                    </div>
+                    <div class='post-date'>
+                      <span aria-label='Published date'>📅</span>
+                      <time expr:datetime='data:post.date.iso8601' itemprop='datePublished'><data:post.dateHeader/></time>
+                    </div>
+                    <b:if cond='data:post.labels'>
+                      <div class='post-labels'>
+                        <span aria-label='Categories'>🏷️</span>
+                        <b:loop values='data:post.labels' var='label'>
+                          <a class='label' expr:href='data:label.url' itemprop='keywords'><data:label.name/></a>
+                        </b:loop>
+                      </div>
+                    </b:if>
+                  </div>
+                </header>
+                
+                <!-- Post body -->
+                <div class='post-body' itemprop='articleBody'>
+                  <data:post.body/>
+                </div>
+                
+                <!-- Post footer -->
+                <footer class='post-footer'>
+                  <b:if cond='data:post.hasJumpLink'>
+                    <a class='read-more' expr:href='data:post.url' aria-label='Đọc tiếp bài viết'>
+                      Đọc tiếp <span aria-hidden='true'>→</span>
+                    </a>
+                  </b:if>
+                  
+                  <div class='post-actions'>
+                    <!-- Share buttons can be added here -->
+                  </div>
+                </footer>
+                
+                <!-- Structured data for article -->
+                <script type='application/ld+json'>
+                {
+                  "@context": "https://schema.org",
+                  "@type": "BlogPosting",
+                  "headline": "<data:post.title/>",
+                  "author": {
+                    "@type": "Person",
+                    "name": "<data:post.author/>"
+                  },
+                  "datePublished": "<data:post.date.iso8601/>",
+                  "dateModified": "<data:post.date.iso8601/>",
+                  "url": "<data:post.url/>",
+                  "description": "<data:post.snippet/>",
+                  "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "<data:post.url/>"
+                  },
+                  "publisher": {
+                    "@type": "Organization",
+                    "name": "Cuddles & Giggles",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/candgig-logo.png"
+                    }
+                  }
+                }
+                </script>
+              </article>
+            </b:loop>
+            
+            <!-- Pagination -->
+            <nav class='pagination' aria-label='Pagination navigation'>
+              <b:include name='nextprev'/>
+            </nav>
+          </b:includable>
+          
+          <!-- Next/Previous navigation template -->
+          <b:includable id='nextprev'>
+            <b:if cond='data:newerPageUrl'>
+              <a class='page-link' expr:href='data:newerPageUrl' rel='prev'>← Mới hơn</a>
+            </b:if>
+            <b:if cond='data:olderPageUrl'>
+              <a class='page-link' expr:href='data:olderPageUrl' rel='next'>Cũ hơn →</a>
+            </b:if>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </section>
+    
+    <!-- Sidebar -->
+    <aside class='sidebar' role='complementary' aria-label='Sidebar content'>
+      
+      <!-- Search Widget -->
+      <div class='widget'>
+        <h3 class='widget-title'>Tìm kiếm</h3>
+        <div class='widget-content'>
+          <div class='search-container'>
+            <input type='text' class='search-input' placeholder='Tìm kiếm bài viết...' aria-label='Search posts'/>
+            <button class='search-button' aria-label='Search'>🔍</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Popular Posts Widget -->
+      <b:section class='sidebar' id='sidebar-1' preferred='yes'>
+        <b:widget id='PopularPosts1' locked='false' title='Bài viết phổ biến' type='PopularPosts' version='1' visible='true'>
+          <b:includable id='main'>
+            <div class='widget'>
+              <h3 class='widget-title'><data:title/></h3>
+              <div class='widget-content'>
+                <b:loop values='data:posts' var='post'>
+                  <div class='popular-post'>
+                    <a expr:href='data:post.href' expr:title='data:post.title'><data:post.title/></a>
+                  </div>
+                </b:loop>
+              </div>
+            </div>
+          </b:includable>
+        </b:widget>
+      </b:section>
+      
+      <!-- Labels Widget -->
+      <b:section class='sidebar' id='sidebar-2' preferred='yes'>
+        <b:widget id='Label1' locked='false' title='Chủ đề' type='Label' version='1' visible='true'>
+          <b:includable id='main'>
+            <div class='widget'>
+              <h3 class='widget-title'><data:title/></h3>
+              <div class='widget-content'>
+                <b:loop values='data:labels' var='label'>
+                  <a class='label' expr:href='data:label.url'>
+                    <data:label.name/> (<data:label.count/>)
+                  </a>
+                </b:loop>
+              </div>
+            </div>
+          </b:includable>
+        </b:widget>
+      </b:section>
+      
+      <!-- Archive Widget -->
+      <b:section class='sidebar' id='sidebar-3' preferred='yes'>
+        <b:widget id='BlogArchive1' locked='false' title='Lưu trữ' type='BlogArchive' version='1' visible='true'>
+          <b:includable id='main'>
+            <div class='widget'>
+              <h3 class='widget-title'><data:title/></h3>
+              <div class='widget-content'>
+                <b:if cond='data:style == &quot;HIERARCHY&quot;'>
+                  <b:include name='interval'/>
+                </b:if>
+                <b:if cond='data:style == &quot;FLAT&quot;'>
+                  <b:include name='flat'/>
+                </b:if>
+                <b:if cond='data:style == &quot;MENU&quot;'>
+                  <b:include name='menu'/>
+                </b:if>
+              </div>
+            </div>
+          </b:includable>
+          
+          <b:includable id='flat'>
+            <b:loop values='data:data' var='i'>
+              <a class='archive-link' expr:href='data:i.url'><data:i.name/> (<data:i.post-count/>)</a>
+            </b:loop>
+          </b:includable>
+          
+          <b:includable id='menu'>
+            <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;' onchange='if(this.value) window.open(this.value, &quot;_top&quot;)'>
+              <option value=''>Chọn tháng...</option>
+              <b:loop values='data:data' var='i'>
+                <option expr:value='data:i.url'><data:i.name/> (<data:i.post-count/>)</option>
+              </b:loop>
+            </select>
+          </b:includable>
+          
+          <b:includable id='interval'>
+            <b:loop values='data:data' var='i'>
+              <div class='archive-year'>
+                <a expr:href='data:i.url'><data:i.name/> (<data:i.post-count/>)</a>
+                <b:if cond='data:i.data'>
+                  <div class='archive-months'>
+                    <b:loop values='data:i.data' var='j'>
+                      <a expr:href='data:j.url'><data:j.name/> (<data:j.post-count/>)</a>
+                    </b:loop>
+                  </div>
+                </b:if>
+              </div>
+            </b:loop>
+          </b:includable>
+        </b:widget>
+      </b:section>
+      
+    </aside>
+    
+  </main>
+</div>
+
+<!-- Footer -->
+<footer class='footer' role='contentinfo'>
+  <div class='footer-content'>
+    <div class='footer-section'>
+      <h3>Về Cuddles &amp; Giggles</h3>
+      <p>Blog chia sẻ kinh nghiệm nuôi dạy con, chăm sóc em bé và phát triển trẻ em. Cùng nhau tạo nên những kỷ niệm đẹp trong hành trình làm cha mẹ.</p>
+    </div>
+    
+    <div class='footer-section'>
+      <h3>Chủ đề hot</h3>
+      <ul>
+        <li><a href='/search/label/nuoi-day-con'>Nuôi dạy con</a></li>
+        <li><a href='/search/label/cham-soc-be'>Chăm sóc em bé</a></li>
+        <li><a href='/search/label/suc-khoe-tre-em'>Sức khỏe trẻ em</a></li>
+        <li><a href='/search/label/giao-duc-som'>Giáo dục sớm</a></li>
+      </ul>
+    </div>
+    
+    <div class='footer-section'>
+      <h3>Theo dõi chúng tôi</h3>
+      <div class='social-links'>
+        <a href='https://facebook.com/candgig24' class='social-link' aria-label='Facebook' target='_blank' rel='noopener'>f</a>
+        <a href='https://twitter.com/candgig' class='social-link' aria-label='Twitter' target='_blank' rel='noopener'>t</a>
+        <a href='mailto:contact@candgig.com' class='social-link' aria-label='Email'>@</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class='footer-bottom'>
+    <div class='container'>
+      <p>&copy; 2024 Cuddles &amp; Giggles. Tất cả quyền được bảo lưu.</p>
+      <p>Được tối ưu hóa cho Core Web Vitals và trải nghiệm người dùng tốt nhất.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript for enhanced functionality -->
+<script>
+// Mobile navigation toggle
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  const nav = document.querySelector('.main-nav');
+  const isExpanded = this.getAttribute('aria-expanded') === 'true';
+  
+  this.setAttribute('aria-expanded', !isExpanded);
+  nav.classList.toggle('active');
+});
+
+// Search functionality
+document.querySelector('.search-button').addEventListener('click', function() {
+  const query = document.querySelector('.search-input').value;
+  if (query.trim()) {
+    window.location.href = '/search?q=' + encodeURIComponent(query);
+  }
+});
+
+document.querySelector('.search-input').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    document.querySelector('.search-button').click();
+  }
+});
+
+// Lazy loading for images
+if ('IntersectionObserver' in window) {
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+        observer.unobserve(img);
+      }
+    });
+  });
+
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+  });
+}
+
+// Service Worker registration for PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js')
+      .then(function(registration) {
+        console.log('SW registered: ', registration);
+      })
+      .catch(function(registrationError) {
+        console.log('SW registration failed: ', registrationError);
+      });
+  });
+}
+</script>
+
+<!-- Google Analytics (replace with actual tracking ID) -->
+<script async='' src='https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_TRACKING_ID');
+</script>
+
+</body>
+</html>
