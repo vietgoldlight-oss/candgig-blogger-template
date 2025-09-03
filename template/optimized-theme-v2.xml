@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.2.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+    <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' name='viewport'/>
+    <title><data:view.title.escaped/></title>
+    <b:include data='blog' name='all-head-content'/>
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+    <meta expr:content='data:blog.title.escaped' name='author'/>
+    <meta content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' name='robots'/>
+    <link expr:href='data:blog.canonicalUrl' rel='canonical'/>
+    
+    <!-- Enhanced Open Graph Meta Tags -->
+    <b:if cond='data:view.isHomepage'>
+      <meta content='website' property='og:type'/>
+      <meta expr:content='data:blog.title.escaped' property='og:title'/>
+      <meta expr:content='data:blog.metaDescription' property='og:description'/>
+      <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+      <meta content='CandGig' property='og:site_name'/>
+    </b:if>
+    <b:if cond='data:view.isSingleItem'>
+      <meta content='article' property='og:type'/>
+      <meta expr:content='data:view.title.escaped' property='og:title'/>
+      <meta expr:content='data:view.description.escaped' property='og:description'/>
+      <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+      <meta content='CandGig' property='og:site_name'/>
+      <b:if cond='data:view.featuredImage'>
+        <meta expr:content='data:view.featuredImage' property='og:image'/>
+        <meta content='1200' property='og:image:width'/>
+        <meta content='630' property='og:image:height'/>
+      </b:if>
+    </b:if>
+    
+    <!-- Enhanced Twitter Card Meta Tags -->
+    <meta content='summary_large_image' name='twitter:card'/>
+    <meta expr:content='data:blog.title.escaped' name='twitter:site'/>
+    <meta expr:content='data:view.title.escaped' name='twitter:title'/>
+    <meta expr:content='data:view.description.escaped' name='twitter:description'/>
+    <b:if cond='data:view.featuredImage'>
+      <meta expr:content='data:view.featuredImage' name='twitter:image'/>
+    </b:if>
+    
+    <!-- Performance Optimizations -->
+    <link href='https://fonts.googleapis.com' rel='preconnect'/>
+    <link href='https://fonts.gstatic.com' rel='preconnect' crossorigin='anonymous'/>
+    <link href='https://cdnjs.cloudflare.com' rel='preconnect'/>
+    <link href='https://cdn.jsdelivr.net' rel='preconnect'/>
+    
+    <!-- Font Loading with fallbacks -->
+    <link as='style' href='https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap' onload='this.onload=null;this.rel=&quot;stylesheet&quot;' rel='preload'/>
+    <noscript>
+      <link href='https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap' rel='stylesheet'/>
+    </noscript>
+    
+    <!-- Font Awesome -->
+    <link as='style' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' onload='this.onload=null;this.rel=&quot;stylesheet&quot;' rel='preload'/>
+    <noscript>
+      <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' rel='stylesheet'/>
+    </noscript>
+    
+    <!-- Theme Stylesheets via CDN -->
+    <link href='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/css/style.css' rel='stylesheet' type='text/css'/>
+    <link href='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/css/responsive.css' rel='stylesheet' type='text/css'/>
+    
+    <!-- Required b:skin section for Blogger validation -->
+    <b:skin version='1.0.0'><![CDATA[
+/* 
+-----------------------------------------------
+CandGig Blogger Template - Optimized v2.0
+Name:        CandGig 
+Version:     2.0 (Blogger Compatible)
+Author:      CandGig Team
+Repository:  https://github.com/vietgoldlight-oss/candgig-blogger-template
+----------------------------------------------- */
+
+/* Essential CSS Variables for Blogger Theme Designer */
+:root {
+  --main-color: #f12020;
+  --main-dark-color: #111111;
+  --body-bg-color: #f8f8f8;
+  --body-text-color: #656565;
+  --body-link-color: #f12020;
+  --posts-bg-color: #ffffff;
+  --posts-title-color: #111111;
+  --posts-text-color: #656565;
+  --body-font: 'Noto Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Critical Inline CSS - Only Essential Styles */
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-bg-color);
+  color: var(--body-text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+#outer-wrapper {
+  margin: 0 auto;
+  background-color: var(--posts-bg-color);
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+  max-width: 1200px;
+}
+
+.container, .row {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Hide Blogger default elements */
+#navbar-iframe, .widget-item-control, a.quickedit, .home-link, .feed-links {
+  display: none !important;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--main-color);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1001;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Basic Reset */
+a, img { border: 0; }
+a { color: var(--body-link-color); text-decoration: none; }
+.clearfix { clear: both; }
+.section, .widget, .widget ul { margin: 0; padding: 0; }
+]]></b:skin>
+    
+    <!-- Additional Critical CSS -->
+    <style>
+      /* Loading Animation */
+      .loading {
+        text-align: center;
+        padding: 20px;
+        color: #999;
+      }
+      .loading::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid var(--main-color, #f12020);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 10px;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+    
+    <!-- Theme Configuration -->
+    <script type='text/javascript'>
+    //<![CDATA[
+    // CandGig Theme Configuration
+    window.CandGigConfig = {
+      monthFormat: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      noThumbnail: "https://via.placeholder.com/680x400/f0f0f0/666666?text=CandGig",
+      postPerPage: 8,
+      fixedSidebar: true,
+      commentsSystem: "blogger", // blogger, disqus, facebook, hide
+      disqusShortname: "candgig",
+      theme: {
+        name: "CandGig",
+        version: "2.0",
+        author: "CandGig Team",
+        repository: "https://github.com/vietgoldlight-oss/candgig-blogger-template"
+      }
+    };
+    //]]>
+    </script>
+  </head>
+  
+  <body expr:class='data:blog.pageType + &quot; &quot; + data:blog.languageDirection' itemscope='itemscope' itemtype='https://schema.org/WebPage'>
+    <!-- Skip to content link for accessibility -->
+    <a href='#main-content' class='skip-link'>Skip to main content</a>
+    
+    <!-- Theme Options (hidden in layout) -->
+    <b:section class='sora-panel' id='sora-panel' maxwidgets='1' name='Theme Options' showaddelement='no'>
+      <b:widget id='HTML999' locked='true' title='Theme Options' type='HTML' version='2' visible='false'>
+        <b:widget-settings>
+          <b:widget-setting name='content'/>
+        </b:widget-settings>
+        <b:includable id='main'>
+          <!-- Theme options content -->
+        </b:includable>
+      </b:widget>
+    </b:section>
+    
+    <div id='outer-wrapper'>
+      <!-- Top Bar -->
+      <div id='top-bar'>
+        <div class='container row'>
+          <b:section class='top-bar-nav' id='top-bar-nav' maxwidgets='1' name='Top Navigation' showaddelement='yes'>
+            <b:widget id='LinkList1' locked='false' title='Top Navigation' type='LinkList' version='2' visible='true'>
+              <b:widget-settings>
+                <b:widget-setting name='sorting'>NONE</b:widget-setting>
+                <b:widget-setting name='text-0'>Home</b:widget-setting>
+                <b:widget-setting name='link-0'>https://example.com</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+                <nav class='top-bar-nav' role='navigation' aria-label='Secondary Navigation'>
+                  <b:if cond='data:links'>
+                    <ul>
+                      <b:loop values='data:links' var='link'>
+                        <li><a expr:href='data:link.target'><data:link.name/></a></li>
+                      </b:loop>
+                    </ul>
+                  </b:if>
+                </nav>
+              </b:includable>
+            </b:widget>
+          </b:section>
+          
+          <b:section class='top-bar-social social' id='top-bar-social' maxwidgets='1' name='Social Top' showaddelement='yes'>
+            <b:widget id='LinkList2' locked='false' title='Social Links' type='LinkList' version='2' visible='true'>
+              <b:widget-settings>
+                <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+                <div class='top-bar-social social'>
+                  <b:if cond='data:links'>
+                    <b:loop values='data:links' var='link'>
+                      <a expr:href='data:link.target' rel='noopener' target='_blank' expr:title='data:link.name'><data:link.name/></a>
+                    </b:loop>
+                  </b:if>
+                </div>
+              </b:includable>
+            </b:widget>
+          </b:section>
+        </div>
+      </div>
+      
+      <!-- Header -->
+      <div id='header-wrap'>
+        <div class='header-header'>
+          <div class='container row'>
+            <b:section class='header-logo' id='header-logo' maxwidgets='1' name='Header Logo' showaddelement='yes'>
+              <b:widget id='Header1' locked='false' title='CandGig (Header)' type='Header' version='2' visible='true'>
+                <b:widget-settings>
+                  <b:widget-setting name='displayUrl'/>
+                  <b:widget-setting name='displayHeight'>60</b:widget-setting>
+                  <b:widget-setting name='sectionWidth'>300</b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+                  <div class='header-logo'>
+                    <b:if cond='data:blog.logoUrl'>
+                      <a expr:href='data:blog.homepageUrl'><img expr:alt='data:blog.title' expr:src='data:blog.logoUrl'/></a>
+                    <b:else/>
+                      <h1><a expr:href='data:blog.homepageUrl'><data:blog.title/></a></h1>
+                    </b:if>
+                    <b:if cond='data:blog.description'>
+                      <p class='description'><data:blog.description/></p>
+                    </b:if>
+                  </div>
+                </b:includable>
+              </b:widget>
+            </b:section>
+            
+            <b:section class='header-ads' id='header-ads' maxwidgets='1' name='Header Ads 728x90' showaddelement='yes'/>
+          </div>
+        </div>
+        
+        <!-- Mobile Header -->
+        <div class='mobile-header'>
+          <b:section class='mobile-logo' id='mobile-logo' maxwidgets='1' name='Mobile Logo' showaddelement='yes'/>
+        </div>
+      </div>
+      
+      <!-- Main Menu -->
+      <div id='header-menu'>
+        <div class='container row'>
+          <b:section class='main-menu' id='main-menu' maxwidgets='1' name='Main Menu' showaddelement='yes'>
+            <b:widget id='LinkList3' locked='false' title='Main Menu' type='LinkList' version='2' visible='true'>
+              <b:widget-settings>
+                <b:widget-setting name='sorting'>NONE</b:widget-setting>
+                <b:widget-setting name='text-0'>Home</b:widget-setting>
+                <b:widget-setting name='link-0'>https://example.com</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+                <nav class='main-menu' role='navigation' aria-label='Main Navigation'>
+                  <b:if cond='data:links'>
+                    <ul>
+                      <b:loop values='data:links' var='link'>
+                        <li><a expr:href='data:link.target'><data:link.name/></a></li>
+                      </b:loop>
+                    </ul>
+                  </b:if>
+                </nav>
+              </b:includable>
+            </b:widget>
+          </b:section>
+          
+          <!-- Search -->
+          <div id='nav-search'>
+            <form expr:action='data:blog.searchUrl' id='search-form' method='get' role='search'>
+              <input id='search-input' name='q' placeholder='Search...' type='search' aria-label='Search'/>
+              <button id='search-button' type='submit' aria-label='Submit search'><i class='fa fa-search'></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hot Posts Section -->
+      <b:section id='hot-section' maxwidgets='1' name='Hot Posts' showaddelement='yes'/>
+      
+      <!-- Content Wrapper -->
+      <div id='content-wrapper'>
+        <div class='container row'>
+          <!-- Main Content -->
+          <div id='main-wrapper'>
+            <!-- Home Ads -->
+            <b:section class='home-ad' id='home-ad' maxwidgets='1' name='Home Ads' showaddelement='yes'/>
+            
+            <!-- Main Posts Section -->
+            <main id='main-content'>
+              <b:section class='main' id='main' maxwidgets='1' name='Main Posts' showaddelement='yes'>
+                <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+                  <b:widget-settings>
+                    <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+                    <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+                    <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+                    <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+                    <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+                    <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                    <b:widget-setting name='showEmailPost'>false</b:widget-setting>
+                  </b:widget-settings>
+                  <b:includable id='main' var='top'>
+                    <div class='blog-posts hfeed'>
+                      <b:if cond='data:posts'>
+                        <b:loop values='data:posts' var='post'>
+                          <div class='post-outer'>
+                            <b:include data='post' name='post'/>
+                          </div>
+                        </b:loop>
+                      <b:else/>
+                        <div class='no-posts'>
+                          <p>No posts found.</p>
+                        </div>
+                      </b:if>
+                    </div>
+                    <b:include name='nextprev'/>
+                  </b:includable>
+                  
+                  <b:includable id='post' var='post'>
+                    <article class='post hentry' expr:id='&quot;post-&quot; + data:post.id'>
+                      <b:if cond='data:post.featuredImage'>
+                        <div class='post-image-wrap'>
+                          <a class='post-image-link' expr:href='data:post.link' expr:title='data:post.title'>
+                            <img expr:alt='data:post.title' expr:src='data:post.featuredImage' loading='lazy'/>
+                          </a>
+                        </div>
+                      </b:if>
+                      
+                      <div class='post-header'>
+                        <h2 class='post-title entry-title'>
+                          <a expr:href='data:post.link' expr:title='data:post.title'><data:post.title/></a>
+                        </h2>
+                        
+                        <div class='post-meta'>
+                          <span class='post-author'>By <data:post.author/></span>
+                          <span class='post-date'>
+                            <time expr:datetime='data:post.date.iso8601'><data:post.date/></time>
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div class='post-body entry-content'>
+                        <data:post.body/>
+                      </div>
+                      
+                      <b:if cond='data:post.labels'>
+                        <div class='post-labels'>
+                          <b:loop values='data:post.labels' var='label'>
+                            <a expr:href='data:label.url' rel='tag'><data:label.name/></a>
+                          </b:loop>
+                        </div>
+                      </b:if>
+                    </article>
+                  </b:includable>
+                  
+                  <b:includable id='nextprev'>
+                    <div class='blog-pager' id='blog-pager'>
+                      <b:if cond='data:olderPageUrl'>
+                        <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'>Older Posts</a>
+                      </b:if>
+                      <b:if cond='data:newerPageUrl'>
+                        <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:title='data:newerPageTitle'>Newer Posts</a>
+                      </b:if>
+                    </div>
+                  </b:includable>
+                </b:widget>
+              </b:section>
+            </main>
+          </div>
+          
+          <!-- Sidebar -->
+          <aside id='sidebar-wrapper'>
+            <b:section class='sidebar common-widget' id='sidebar1' name='Sidebar Right (A)' showaddelement='yes'/>
+            
+            <b:section class='sidebar' id='social-widget' maxwidgets='1' name='Social Widget' showaddelement='yes'>
+              <b:widget id='HTML1' locked='false' title='Follow Us' type='HTML' version='2' visible='true'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'><![CDATA[
+<div class="social-widget">
+  <p>Follow us on social media for updates!</p>
+  <div class="social-links">
+    <a href="#" class="facebook" title="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+</div>
+]]></b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+                  <div class='widget-content'><data:content/></div>
+                </b:includable>
+              </b:widget>
+            </b:section>
+            
+            <b:section class='sidebar common-widget' id='sidebar2' name='Sidebar Right (B)' showaddelement='yes'/>
+          </aside>
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <footer id='footer-wrapper'>
+        <div class='footer-content'>
+          <div class='container row'>
+            <b:section class='footer common-widget' id='footer-sec1' maxwidgets='3' name='Section (Left)' showaddelement='yes'/>
+            <b:section class='footer common-widget' id='footer-sec2' maxwidgets='3' name='Section (Center)' showaddelement='yes'/>
+            <b:section class='footer common-widget' id='footer-sec3' maxwidgets='3' name='Section (Right)' showaddelement='yes'/>
+          </div>
+        </div>
+        
+        <div class='footer-menu'>
+          <div class='container row'>
+            <b:section class='menu-footer' id='menu-footer' maxwidgets='1' name='Menu Footer' showaddelement='yes'/>
+          </div>
+        </div>
+        
+        <div class='footer-bottom'>
+          <div class='container row'>
+            <p>© <span id='copyright-year'></span> <data:blog.title/>. Powered by <a href='https://www.blogger.com' rel='nofollow'>Blogger</a>.</p>
+            <p>CandGig Template by <a href='https://github.com/vietgoldlight-oss/candgig-blogger-template' rel='noopener' target='_blank'>CandGig Team</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- JavaScript via CDN -->
+    <script src='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/js/utils.js' defer='defer'></script>
+    <script src='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/js/main.js' defer='defer'></script>
+    
+    <!-- Initialize theme -->
+    <script>
+    //<![CDATA[
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set copyright year
+      const yearElement = document.getElementById('copyright-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+      
+      // Initialize CandGig theme
+      if (window.CandGigTheme && window.CandGigTheme.init) {
+        window.CandGigTheme.init();
+      }
+      
+      // Remove mobile parameter
+      const uri = window.location.toString();
+      if (uri.indexOf("?m=1") > 0) {
+        const clean_uri = uri.substring(0, uri.indexOf("?m=1"));
+        window.history.replaceState({}, document.title, clean_uri);
+      }
+    });
+    //]]>
+    </script>
+  </body>
+</html>
