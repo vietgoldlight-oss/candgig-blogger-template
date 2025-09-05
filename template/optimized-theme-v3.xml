@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='3.0.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+    <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' name='viewport'/>
+    <title><data:view.title.escaped/></title>
+    <b:include data='blog' name='all-head-content'/>
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+    <meta expr:content='data:blog.title.escaped' name='author'/>
+    <meta content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' name='robots'/>
+    <link expr:href='data:blog.canonicalUrl' rel='canonical'/>
+    
+    <!-- Enhanced Open Graph Meta Tags -->
+    <b:if cond='data:view.isHomepage'>
+      <meta content='website' property='og:type'/>
+      <meta expr:content='data:blog.title.escaped' property='og:title'/>
+      <meta expr:content='data:blog.metaDescription' property='og:description'/>
+      <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+      <meta content='CandGig' property='og:site_name'/>
+    </b:if>
+    <b:if cond='data:view.isSingleItem'>
+      <meta content='article' property='og:type'/>
+      <meta expr:content='data:view.title.escaped' property='og:title'/>
+      <meta expr:content='data:view.description.escaped' property='og:description'/>
+      <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+      <meta content='CandGig' property='og:site_name'/>
+      <b:if cond='data:view.featuredImage'>
+        <meta expr:content='data:view.featuredImage' property='og:image'/>
+        <meta content='1200' property='og:image:width'/>
+        <meta content='630' property='og:image:height'/>
+      </b:if>
+    </b:if>
+    
+    <!-- Enhanced Twitter Card Meta Tags -->
+    <meta content='summary_large_image' name='twitter:card'/>
+    <meta expr:content='data:blog.title.escaped' name='twitter:site'/>
+    <meta expr:content='data:view.title.escaped' name='twitter:title'/>
+    <meta expr:content='data:view.description.escaped' name='twitter:description'/>
+    <b:if cond='data:view.featuredImage'>
+      <meta expr:content='data:view.featuredImage' name='twitter:image'/>
+    </b:if>
+    
+    <!-- Performance Optimizations - Resource Hints -->
+    <link href='https://fonts.googleapis.com' rel='preconnect'/>
+    <link href='https://fonts.gstatic.com' rel='preconnect' crossorigin='anonymous'/>
+    <link href='https://cdnjs.cloudflare.com' rel='preconnect'/>
+    <link href='https://cdn.jsdelivr.net' rel='preconnect'/>
+    
+    <!-- Critical CSS Inlined for Instant Rendering -->
+    <style>
+      /* Critical CSS Variables */
+      :root{--main-color:#f12020;--main-dark-color:#111111;--body-bg-color:#f8f8f8;--body-text-color:#656565;--posts-bg-color:#fff;--body-font:'Noto Sans',system-ui,-apple-system,sans-serif}
+      
+      /* Critical Reset & Base */
+      *{box-sizing:border-box}
+      body{font-family:var(--body-font);background-color:var(--body-bg-color);color:var(--body-text-color);margin:0;padding:0;line-height:1.6;font-size:14px;word-wrap:break-word;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+      
+      /* Critical Layout */
+      .container{max-width:1200px;margin:0 auto;padding:0 15px}
+      .row{display:flex;flex-wrap:wrap;margin:0 -15px}
+      .col{flex:1;padding:0 15px}
+      
+      /* Critical Header */
+      .header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);position:relative;z-index:100}
+      .header-top{background:var(--main-dark-color);color:#fff;padding:8px 0;font-size:13px}
+      .header-main{padding:15px 0}
+      .logo{font-size:28px;font-weight:700;color:var(--main-color);text-decoration:none;display:block}
+      
+      /* Critical Navigation */
+      .main-menu{background:var(--main-color);position:relative}
+      .main-menu ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap}
+      .main-menu li{position:relative}
+      .main-menu a{color:#fff;text-decoration:none;padding:15px 20px;display:block;font-weight:500;transition:background-color .3s ease}
+      .main-menu a:hover{background:rgba(255,255,255,.1)}
+      
+      /* Critical Content Area */
+      .content-area{padding:30px 0}
+      .posts-container{background:var(--posts-bg-color);border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.1);overflow:hidden}
+      
+      /* Critical Post Styles */
+      .post{border-bottom:1px solid #eee;padding:25px}
+      .post:last-child{border-bottom:none}
+      .post-title{font-size:22px;font-weight:600;color:var(--main-dark-color);margin:0 0 15px;line-height:1.3}
+      .post-title a{color:inherit;text-decoration:none;transition:color .3s ease}
+      .post-title a:hover{color:var(--main-color)}
+      .post-meta{color:#999;font-size:13px;margin-bottom:15px}
+      .post-excerpt{color:var(--body-text-color);line-height:1.6;margin-bottom:15px}
+      
+      /* Critical Responsive */
+      @media (max-width:768px){
+        .container{padding:0 10px}
+        .row{margin:0 -10px}
+        .col{padding:0 10px}
+        .main-menu ul{flex-direction:column}
+        .main-menu a{padding:12px 15px}
+        .post{padding:20px 15px}
+        .post-title{font-size:20px}
+      }
+      
+      /* Loading States */
+      .lazy-loading{opacity:.6;transition:opacity .3s ease}
+      .lazy-loaded{opacity:1}
+      .skeleton{background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:loading 1.5s infinite}
+      @keyframes loading{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    </style>
+    
+    <!-- Font Loading with Optimized Strategy -->
+    <link as='style' href='https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap' onload='this.onload=null;this.rel=&quot;stylesheet&quot;' rel='preload'/>
+    <noscript><link href='https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap' rel='stylesheet'/></noscript>
+    
+    <!-- Font Awesome with Optimized Loading -->
+    <link as='style' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' onload='this.onload=null;this.rel=&quot;stylesheet&quot;' rel='preload'/>
+    <noscript><link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' rel='stylesheet'/></noscript>
+    
+    <!-- Non-Critical CSS Loaded Asynchronously -->
+    <link href='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/css/main.css' rel='stylesheet' type='text/css' media='print' onload='this.media=&quot;all&quot;'/>
+    <noscript><link href='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/css/main.css' rel='stylesheet' type='text/css'/></noscript>
+    
+    <link href='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/css/responsive.css' rel='stylesheet' type='text/css' media='print' onload='this.media=&quot;all&quot;'/>
+    <noscript><link href='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/css/responsive.css' rel='stylesheet' type='text/css'/></noscript>
+    
+    <!-- Performance Monitoring Script -->
+    <script>
+      // Performance monitoring and optimization
+      (function(){
+        'use strict';
+        
+        // Configuration
+        window.CandGigConfig = {
+          postPerPage: 8,
+          fixedSidebar: true,
+          commentsSystem: 'blogger',
+          disqusShortname: '',
+          theme: { name: 'CandGig', version: '3.0', author: 'CandGig Team' }
+        };
+        
+        // Critical performance optimizations
+        function optimizePerformance() {
+          // Preload critical resources
+          const criticalResources = [
+            { href: 'https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/js/main-optimized.js', as: 'script' },
+            { href: 'https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/js/performance.js', as: 'script' }
+          ];
+          
+          criticalResources.forEach(resource => {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.href = resource.href;
+            link.as = resource.as;
+            document.head.appendChild(link);
+          });
+          
+          // Optimize font loading
+          const fontLinks = document.querySelectorAll('link[href*="fonts.googleapis.com"]');
+          fontLinks.forEach(link => {
+            if (!link.href.includes('display=swap')) {
+              link.href += (link.href.includes('?') ? '&' : '?') + 'display=swap';
+            }
+          });
+        }
+        
+        // Initialize optimizations
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', optimizePerformance);
+        } else {
+          optimizePerformance();
+        }
+      })();
+    </script>
+    
+    <!-- Required b:skin section for Blogger validation -->
+    <b:skin version='3.0.0'><![CDATA[
+/* 
+-----------------------------------------------
+CandGig Blogger Template - Optimized v3.0
+Performance Optimized Version
+----------------------------------------------- */
+
+/* Essential CSS Variables for Blogger Theme Designer */
+:root {
+  --main-color: #f12020;
+  --main-dark-color: #111111;
+  --body-bg-color: #f8f8f8;
+  --body-text-color: #656565;
+  --body-link-color: #f12020;
+  --posts-bg-color: #ffffff;
+  --posts-title-color: #111111;
+  --posts-text-color: #656565;
+  --body-font: 'Noto Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Essential styles only - main styles loaded externally */
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-bg-color);
+  color: var(--body-text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+a {
+  color: var(--body-link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--main-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.lazy-loading {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-loaded {
+  opacity: 1;
+}
+
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .main-menu ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--main-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .main-menu.mobile-open ul {
+    display: flex;
+  }
+}
+]]></b:skin>
+  </head>
+  
+  <body>
+    <!-- Header Section -->
+    <header class='header'>
+      <div class='header-top'>
+        <div class='container'>
+          <div class='row'>
+            <div class='col'>
+              <b:section class='header-top-left' id='header-top-left' maxwidgets='1' showaddelement='yes'>
+                <b:widget id='HeaderTopLeft1' locked='false' title='Header Top Left' type='HTML' version='1'>
+                  <b:widget-settings>
+                    <b:widget-setting name='content'><![CDATA[<div class="header-info">
+                      <i class="fas fa-envelope"></i> contact@candgig.com
+                      <i class="fas fa-phone"></i> +1 (555) 123-4567
+                    </div>]]></b:widget-setting>
+                  </b:widget-settings>
+                  <b:includable id='main'>
+                    <b:if cond='data:title != &quot;&quot;'>
+                      <h2 class='title'><data:title/></h2>
+                    </b:if>
+                    <div class='widget-content'>
+                      <data:content/>
+                    </div>
+                  </b:includable>
+                </b:widget>
+              </b:section>
+            </div>
+            <div class='col'>
+              <b:section class='header-top-right' id='header-top-right' maxwidgets='1' showaddelement='yes'>
+                <b:widget id='HeaderTopRight1' locked='false' title='Header Top Right' type='HTML' version='1'>
+                  <b:widget-settings>
+                    <b:widget-setting name='content'><![CDATA[<div class="social-links">
+                      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>]]></b:widget-setting>
+                  </b:widget-settings>
+                  <b:includable id='main'>
+                    <b:if cond='data:title != &quot;&quot;'>
+                      <h2 class='title'><data:title/></h2>
+                    </b:if>
+                    <div class='widget-content'>
+                      <data:content/>
+                    </div>
+                  </b:includable>
+                </b:widget>
+              </b:section>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class='header-main'>
+        <div class='container'>
+          <div class='row'>
+            <div class='col'>
+              <b:section class='header-logo' id='header-logo' maxwidgets='1' showaddelement='yes'>
+                <b:widget id='HeaderLogo1' locked='false' title='Header Logo' type='Header' version='1'>
+                  <b:includable id='main'>
+                    <b:if cond='data:title != &quot;&quot;'>
+                      <h1 class='title' style='display:none'><data:title/></h1>
+                    </b:if>
+                    <div class='header-widget'>
+                      <a class='logo' expr:href='data:blog.homepageUrl'><data:title/></a>
+                    </div>
+                  </b:includable>
+                </b:widget>
+              </b:section>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Main Navigation -->
+      <nav class='main-menu' id='main-menu'>
+        <div class='container'>
+          <b:section class='main-navigation' id='main-navigation' maxwidgets='1' showaddelement='yes'>
+            <b:widget id='MainNavigation1' locked='false' title='Main Navigation' type='LinkList' version='1'>
+              <b:includable id='main'>
+                <b:if cond='data:title != &quot;&quot;'>
+                  <h2 class='title' style='display:none'><data:title/></h2>
+                </b:if>
+                <div class='LinkList'>
+                  <ul>
+                    <b:loop values='data:links' var='link'>
+                      <li>
+                        <a expr:href='data:link.target'><data:link.name/></a>
+                      </li>
+                    </b:loop>
+                  </ul>
+                </div>
+              </b:includable>
+            </b:widget>
+          </b:section>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- Main Content Area -->
+    <main class='content-area'>
+      <div class='container'>
+        <div class='row'>
+          <!-- Posts Column -->
+          <div class='col col-main'>
+            <div class='posts-container'>
+              <b:section class='main-content' id='main-content' maxwidgets='1' showaddelement='yes'>
+                <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
+                  <b:includable id='main' var='top'>
+                    <!-- posts -->
+                    <div class='blog-posts hfeed' expr:class='&quot;blog-posts hfeed&quot; + (data:blog.mobileClass == &quot;mobile&quot; ? &quot; mobile&quot; : &quot;&quot;)'>
+                      <b:include data='top' name='status-message'/>
+                      <b:loop values='data:posts' var='post'>
+                        <b:include data='post' name='post'/>
+                      </b:loop>
+                    </div>
+                    
+                    <!-- navigation -->
+                    <b:include name='nextprev'/>
+                  </b:includable>
+                  
+                  <b:includable id='post' var='post'>
+                    <article class='post' expr:id='&quot;post-&quot; + data:post.id'>
+                      <header class='post-header'>
+                        <h2 class='post-title'>
+                          <a expr:href='data:post.url'><data:post.title/></a>
+                        </h2>
+                        <div class='post-meta'>
+                          <time expr:datetime='data:post.timestampISO8601'><data:post.timestamp/></time>
+                          <span class='post-author'>by <data:post.author/></span>
+                        </div>
+                      </header>
+                      
+                      <div class='post-content'>
+                        <b:if cond='data:post.thumbnailUrl'>
+                          <div class='post-thumbnail'>
+                            <img expr:alt='data:post.title' expr:src='data:post.thumbnailUrl' loading='lazy'/>
+                          </div>
+                        </b:if>
+                        <div class='post-excerpt'>
+                          <data:post.snippet/>
+                        </div>
+                      </div>
+                      
+                      <footer class='post-footer'>
+                        <div class='post-labels'>
+                          <b:loop values='data:post.labels' var='label'>
+                            <a class='label' expr:href='data:label.url'><data:label.name/></a>
+                          </b:loop>
+                        </div>
+                        <a class='read-more' expr:href='data:post.url'>Read More</a>
+                      </footer>
+                    </article>
+                  </b:includable>
+                  
+                  <b:includable id='nextprev'>
+                    <div class='blog-pager' id='blog-pager'>
+                      <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                        <!-- Blog post pagination -->
+                        <b:if cond='data:blog.nextPageUrl'>
+                          <a class='blog-pager-newer-link' expr:href='data:blog.nextPageUrl' id='Blog1_blog-pager-newer-link'>
+                            <data:blog.nextPageTitle/>
+                          </a>
+                        </b:if>
+                        <b:if cond='data:blog.previousPageUrl'>
+                          <a class='blog-pager-older-link' expr:href='data:blog.previousPageUrl' id='Blog1_blog-pager-older-link'>
+                            <data:blog.previousPageTitle/>
+                          </a>
+                        </b:if>
+                      <b:else/>
+                        <!-- Blog home pagination -->
+                        <b:if cond='data:blog.pageType == &quot;index&quot;'>
+                          <b:if cond='data:blog.nextPageUrl'>
+                            <a class='blog-pager-newer-link' expr:href='data:blog.nextPageUrl' id='Blog1_blog-pager-newer-link'>
+                              <data:blog.nextPageTitle/>
+                            </a>
+                          </b:if>
+                          <b:if cond='data:blog.previousPageUrl'>
+                            <a class='blog-pager-older-link' expr:href='data:blog.previousPageUrl' id='Blog1_blog-pager-older-link'>
+                              <data:blog.previousPageTitle/>
+                            </a>
+                          </b:if>
+                        </b:if>
+                      </b:if>
+                    </div>
+                  </b:includable>
+                </b:widget>
+              </b:section>
+            </div>
+          </div>
+          
+          <!-- Sidebar Column -->
+          <div class='col col-sidebar'>
+            <aside class='sidebar'>
+              <b:section class='sidebar-widgets' id='sidebar-widgets' maxwidgets='10' showaddelement='yes'>
+                <!-- Search Widget -->
+                <b:widget id='SearchBox1' locked='false' title='Search' type='SearchBox' version='1'>
+                  <b:includable id='main'>
+                    <div class='widget search-widget'>
+                      <h3 class='widget-title'>Search</h3>
+                      <div class='widget-content'>
+                        <form class='search-form' expr:action='data:blog.searchUrl'>
+                          <input class='search-input' name='q' placeholder='Search...' type='search'/>
+                          <button class='search-button' type='submit'>
+                            <i class='fas fa-search'></i>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </b:includable>
+                </b:widget>
+                
+                <!-- Popular Posts Widget -->
+                <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='1'>
+                  <b:includable id='main'>
+                    <div class='widget popular-posts-widget'>
+                      <h3 class='widget-title'>Popular Posts</h3>
+                      <div class='widget-content'>
+                        <ul class='popular-posts-list'>
+                          <b:loop values='data:posts' var='post'>
+                            <li class='popular-post-item'>
+                              <a expr:href='data:post.url'>
+                                <b:if cond='data:post.thumbnailUrl'>
+                                  <img expr:alt='data:post.title' expr:src='data:post.thumbnailUrl' loading='lazy'/>
+                                </b:if>
+                                <span class='post-title'><data:post.title/></span>
+                              </a>
+                            </li>
+                          </b:loop>
+                        </ul>
+                      </div>
+                    </div>
+                  </b:includable>
+                </b:widget>
+                
+                <!-- Labels Widget -->
+                <b:widget id='Label1' locked='false' title='Labels' type='Label' version='1'>
+                  <b:includable id='main'>
+                    <div class='widget labels-widget'>
+                      <h3 class='widget-title'>Labels</h3>
+                      <div class='widget-content'>
+                        <div class='label-cloud'>
+                          <b:loop values='data:labels' var='label'>
+                            <a class='label' expr:href='data:label.url' expr:style='&quot;font-size: &quot; + data:label.count + &quot;px&quot;'>
+                              <data:label.name/>
+                            </a>
+                          </b:loop>
+                        </div>
+                      </div>
+                    </div>
+                  </b:includable>
+                </b:widget>
+              </b:section>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer id='footer'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col'>
+            <b:section class='footer-widgets' id='footer-widgets' maxwidgets='4' showaddelement='yes'>
+              <b:widget id='HTML1' locked='false' title='Footer Widget 1' type='HTML' version='1'>
+                <b:includable id='main'>
+                  <div class='widget'>
+                    <h3 class='widget-title'>About</h3>
+                    <div class='widget-content'>
+                      <p>Welcome to CandGig, your source for the latest news, insights, and stories.</p>
+                    </div>
+                  </div>
+                </b:includable>
+              </b:widget>
+            </b:section>
+          </div>
+        </div>
+        
+        <div class='footer-bottom'>
+          <p>&copy; <data:blog.title/>. All rights reserved. | Powered by <a href='https://candgig.blogspot.com/'>CandGig</a></p>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Non-Critical JavaScript Loaded Asynchronously -->
+    <script src='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/js/performance.js' async></script>
+    <script src='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/js/lazy-loading.js' async></script>
+    <script src='https://cdn.jsdelivr.net/gh/vietgoldlight-oss/candgig-blogger-template@main/assets/js/main-optimized.js' async></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('SW registered: ', registration);
+            })
+            .catch(function(registrationError) {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
